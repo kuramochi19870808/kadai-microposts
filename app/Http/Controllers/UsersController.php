@@ -84,5 +84,25 @@ class UsersController extends Controller
             'users' => $followers,
         ]);
     }
+ 
+    public function favorites($id)
+    {
+        $data = [];
+        if (\Auth::check()) { // 認証済みの場合
+            // 認証済みユーザを取得
+            $user = User::findOrFail($id);
+            // ユーザの投稿の一覧を作成日時の降順で取得
+            $microposts = $user->favorites()->orderBy('created_at', 'desc')->paginate(5);
+            // 関係するモデルの件数をロード
+            $user->loadRelationshipCounts();
+
+            $data = [
+                'user' => $user,
+                'microposts' => $microposts,
+            ];
+        }
+        // Welcomeビューでそれらを表示
+        return view('users.favorites', $data);
+    }
 
 }

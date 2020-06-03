@@ -8,8 +8,8 @@
                 @include('users.card')
             </aside>
             <div class="col-sm-8">
-                {{-- 投稿フォーム --}}
-                @include('microposts.form')
+                {{-- タブ --}}
+                @include('users.navtabs')
                 {{-- 投稿一覧 --}}
                 @include('microposts.microposts')
             </div>
@@ -17,12 +17,9 @@
     @else
         <div class="center jumbotron">
             <div class="text-center">
-                <h1>Microposts</h1>
-                <p>これはメッセージを投稿、共有するツールです。</p>
+                <h1>Welcome to the Microposts</h1>
                 {{-- ユーザ登録ページへのリンク --}}
-                {!! link_to_route('signup.get', 'Sign up', [], ['class' => 'btn btn-lg btn-primary']) !!}
-                {{-- ユーザ登録ページへのリンク --}}
-                {!! link_to_route('login', 'Login', [], ['class' => 'btn btn-lg btn-success']) !!}
+                {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-lg btn-primary']) !!}
             </div>
         </div>
     @endif

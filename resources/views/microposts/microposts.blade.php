@@ -14,13 +14,28 @@
                         {{-- 投稿内容 --}}
                         <p class="mb-0">{!! nl2br(e($micropost->content)) !!}</p>
                     </div>
-                    <div>
-                        @if (Auth::id() == $micropost->user_id)
-                            {{-- 投稿削除ボタンのフォーム --}}
-                            {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
-                                {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-                            {!! Form::close() !!}
-                        @endif
+                    <div class="post-btns">
+                        <div class="mr-2">
+                            @if (Auth::user()->is_favorite($micropost->id))
+                                {{-- アンファボボタンのフォーム --}}
+                                {!! Form::open(['route' => ['favorites.unfavorite', $micropost->id], 'method' => 'delete']) !!}
+                                    {!! Form::submit('Unfavorie', ['class' => "btn btn-sm btn-warning"]) !!}
+                                {!! Form::close() !!}
+                            @else
+                                {{-- ファボボタンのフォーム --}}
+                                {!! Form::open(['route' => ['favorites.favorite', $micropost->id]]) !!}
+                                    {!! Form::submit('Favorite', ['class' => "btn btn-sm btn-success"]) !!}
+                                {!! Form::close() !!}
+                            @endif
+                        </div>
+                        <div>
+                            @if (Auth::id() == $micropost->user_id)
+                                {{-- 投稿削除ボタンのフォーム --}}
+                                {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
+                                    {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+                                {!! Form::close() !!}
+                            @endif
+                        </div>
                     </div>
                 </div>
             </li>
