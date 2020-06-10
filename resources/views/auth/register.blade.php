@@ -29,6 +29,11 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
+                <div class="form-group">
+                    {!! Form::label('image', 'Image') !!}
+                    </br>
+                    {!! Form::file('image', old('file'), ['class' => 'form-control']) !!}
+                </div>
                 {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
         </div>

@@ -29,3 +29,9 @@ Route::group(['middleware' => ['auth']], function () {
     
     Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
 });
+
+// 画像保存
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/profile', 'ProfileController@index');
+    Route::post('/profile', 'ProfileController@store');
+});

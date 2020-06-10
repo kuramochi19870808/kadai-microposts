@@ -3,7 +3,13 @@
         @foreach ($users as $user)
             <li class="media">
                 {{-- ユーザのメールアドレスをもとにGravatarを取得して表示 --}}
-                <img class="mr-2 rounded" src="{{ Gravatar::get($user->email, ['size' => 50]) }}" alt="">
+                @if($user->image)
+                   <!--画像が存在する場合-->
+                    <img class="mr-2 rounded image-icon50" src="{{ $user->image }}" alt="">
+                @else
+                   <!--画像が存在しない場合-->
+                    <img class="mr-2 rounded image-icon50" src="/storage/profile_images/0.jpg" alt="">
+                @endif
                 <div class="media-body">
                     <div>
                         {{ $user->name }}

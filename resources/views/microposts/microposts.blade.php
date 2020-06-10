@@ -3,7 +3,7 @@
         @foreach ($microposts as $micropost)
             <li class="media mb-3">
                 {{-- 投稿の所有者のメールアドレスをもとにGravatarを取得して表示 --}}
-                <img class="mr-2 rounded" src="{{ Gravatar::get($micropost->user->email, ['size' => 50]) }}" alt="">
+                <img class="mr-2 rounded image-icon50" src="{{ $micropost->user->image }}" alt="">
                 <div class="media-body">
                     <div>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
