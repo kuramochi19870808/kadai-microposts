@@ -1,3 +1,4 @@
+@if (Auth::id() == $user->id)
 <div class="pt-3">
 <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
 @csrf
@@ -7,3 +8,4 @@
     </button>
 </form>    
 </div>
+@endif

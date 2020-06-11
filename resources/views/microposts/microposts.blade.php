@@ -6,7 +6,7 @@
                 @if($micropost->user->image)
                 <img class="mr-2 rounded image-icon50" src="{{ $micropost->user->image }}" alt="">
                 @else
-                <img class="mr-2 rounded image-icon50" src="/storage/profile_images/0.jpg" alt="">
+                <img class="mr-2 rounded image-icon50" src="{{ asset('images/0.jpg') }}" alt="">
                 @endif
                 <div class="media-body">
                     <div>

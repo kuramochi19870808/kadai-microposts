@@ -8,7 +8,7 @@
             <img class="rounded img-fluid image-icon300" src="{{ $user->image }}" alt="">
         @else
            <!--画像が存在しない場合-->
-            <img class="rounded img-fluid image-icon300" src="/storage/profile_images/0.jpg" alt="">
+            <img class="rounded img-fluid image-icon300" src="{{ asset('images/0.jpg') }}" alt="">
         @endif
         {{-- ユーザのメールアドレスをもとにGravatarを取得して表示 --}}
     </div>
