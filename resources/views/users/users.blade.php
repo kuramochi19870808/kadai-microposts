@@ -1,7 +1,8 @@
+<div class="pt-5 pb-3">
 @if (count($users) > 0)
     <ul class="list-unstyled">
         @foreach ($users as $user)
-            <li class="media">
+            <li class="media mb-2">
                 {{-- ユーザのメールアドレスをもとにGravatarを取得して表示 --}}
                 @if($user->image)
                    <!--画像が存在する場合-->
@@ -25,3 +26,4 @@
     {{-- ページネーションのリンク --}}
     {{ $users->links() }}
 @endif
+</div>

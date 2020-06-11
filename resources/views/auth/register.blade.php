@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="pt-5 pb-5">
     <div class="text-center">
         <h1>Sign up</h1>
     </div>
@@ -29,13 +30,9 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
-                <div class="form-group">
-                    {!! Form::label('image', 'Image') !!}
-                    </br>
-                    {!! Form::file('image', old('file'), ['class' => 'form-control']) !!}
-                </div>
                 {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
         </div>
     </div>
+</div>
 @endsection

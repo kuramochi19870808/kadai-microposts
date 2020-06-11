@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="pt-5 pb-5">
     <div class="text-center">
         <h1>Log in</h1>
     </div>
@@ -25,5 +26,6 @@
             {{-- ユーザ登録ページへのリンク --}}
             <p class="mt-2">New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
         </div>
-    </div>
+    </div>    
+</div>
 @endsection

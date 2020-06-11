@@ -2,7 +2,8 @@
 
 @section('content')
     @if (Auth::check())
-        <div class="row">
+    <div>
+        <div class="row pt-5 pb-5">
             <aside class="col-sm-4">
                 {{-- ユーザ情報 --}}
                 @include('users.card')
@@ -14,8 +15,11 @@
                 @include('microposts.microposts')
             </div>
         </div>
+    </div>
     @else
-        <div class="center jumbotron">
+    <div class="bg">
+    <div class="bg-mask">   
+        <div class="top center pt-5">
             <div class="text-center">
                 <h1>Microposts</h1>
                 <p>これはメッセージを投稿、共有するツールです。</p>
@@ -25,5 +29,7 @@
                 {!! link_to_route('login', 'Login', [], ['class' => 'btn btn-lg btn-success']) !!}
             </div>
         </div>
+    </div>
+    </div>
     @endif
 @endsection

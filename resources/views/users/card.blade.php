@@ -2,7 +2,7 @@
     <div class="card-header">
         <h3 class="card-title">{{ $user->name }}</h3>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
         @if($user->image)
            <!--画像が存在する場合-->
             <img class="rounded img-fluid image-icon300" src="{{ $user->image }}" alt="">

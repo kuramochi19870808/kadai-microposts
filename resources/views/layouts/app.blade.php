@@ -8,17 +8,22 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
 
-    <body>
+    <body class="bg-dark">
 
         {{-- ナビゲーションバー --}}
         @include('commons.navbar')
 
-        <div class="container">
+        <div class="container-fluid main bg-lightglay">
             {{-- エラーメッセージ --}}
             @include('commons.error_messages')
 
             @yield('content')
         </div>
+        
+        <footer class="bg-dark text-light">
+            <small>&copy; 2020 ikuma.kuramochi</small>
+        </footer>
+
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>

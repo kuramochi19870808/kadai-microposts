@@ -3,7 +3,11 @@
         @foreach ($microposts as $micropost)
             <li class="media mb-3">
                 {{-- 投稿の所有者のメールアドレスをもとにGravatarを取得して表示 --}}
+                @if($micropost->user->image)
                 <img class="mr-2 rounded image-icon50" src="{{ $micropost->user->image }}" alt="">
+                @else
+                <img class="mr-2 rounded image-icon50" src="/storage/profile_images/0.jpg" alt="">
+                @endif
                 <div class="media-body">
                     <div>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}

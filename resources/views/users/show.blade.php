@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="pt-5 pb-5">
     <div class="row">
         <aside class="col-sm-4">
             {{-- ユーザ情報 --}}
@@ -16,5 +17,6 @@
             {{-- 投稿一覧 --}}
             @include('microposts.microposts')
         </div>
-    </div>
+    </div>    
+</div>
 @endsection
