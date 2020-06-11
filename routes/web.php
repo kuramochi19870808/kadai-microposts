@@ -35,3 +35,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', 'ProfileController@index');
     Route::post('/profile', 'ProfileController@store');
 });
+
+Route::get('/image', 'ImageController@index');
+Route::post('/image', 'ImageController@store')->name('image.store');

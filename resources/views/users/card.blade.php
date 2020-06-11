@@ -14,6 +14,6 @@
     </div>
 </div>
 {{-- 画像変更 --}}
-@include('profile.index')
+@include('images.index')
 {{-- フォロー／アンフォローボタン --}}
 @include('user_follow.follow_button')
