@@ -22,7 +22,7 @@
         <div class="top center pt-5">
             <div class="text-center">
                 <h1>Microposts</h1>
-                <p>これはメッセージを投稿、共有するツールです。</p>
+                <p>これはメッセージを投稿、共有するツールです</p>
                 {{-- ユーザ登録ページへのリンク --}}
                 {!! link_to_route('signup.get', 'Sign up', [], ['class' => 'btn btn-lg btn-primary']) !!}
                 {{-- ユーザ登録ページへのリンク --}}
