@@ -23,11 +23,18 @@
             <div class="text-center">
                 <h1>Microposts</h1>
                 <p>これはメッセージを投稿、共有するツールです</p>
-                {{-- ユーザ登録ページへのリンク --}}
-                {!! link_to_route('signup.get', 'Sign up', [], ['class' => 'btn btn-lg btn-primary']) !!}
-                {{-- ユーザ登録ページへのリンク --}}
-                {!! link_to_route('login', 'Login', [], ['class' => 'btn btn-lg btn-success']) !!}
-            </div>
+                <div class="d-none d-sm-block">
+                    {{-- ユーザ登録ページへのリンク --}}
+                    {!! link_to_route('signup.get', 'Sign up', [], ['class' => 'btn btn-lg btn-primary mr-3 w-150px']) !!}
+                    {{-- ユーザ登録ページへのリンク --}}
+                    {!! link_to_route('login', 'Login', [], ['class' => 'btn btn-lg btn-success w-150px']) !!}
+                </div>
+                <div class="d-block d-sm-none">
+                    {{-- ユーザ登録ページへのリンク --}}
+                    {!! link_to_route('signup.get', 'Sign up', [], ['class' => 'btn btn-lg btn-primary mb-2 w-75']) !!}
+                    {{-- ユーザ登録ページへのリンク --}}
+                    {!! link_to_route('login', 'Login', [], ['class' => 'btn btn-lg btn-success w-75']) !!}
+                </div>
         </div>
     </div>
     </div>
