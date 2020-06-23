@@ -20,7 +20,7 @@
     <div class="bg">
     <div class="bg-mask">   
         <div class="top center pt-5">
-            <div class="text-center">
+            <div class="top text-center">
                 <h1>Microposts</h1>
                 <p>これはメッセージを投稿、共有するツールです</p>
                 <div class="d-none d-sm-block">
